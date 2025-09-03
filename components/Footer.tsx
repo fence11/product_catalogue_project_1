@@ -1,14 +1,17 @@
 "use client";
 
-import Link from "next/link";
+import { Titan_One } from 'next/font/google';
+import Link from 'next/link'
 import { footerLinks } from "@/constants";
+
+const title_font = Titan_One({ subsets: ['latin'], weight: ['400'] });
 
 export default function Footer() {
   return (
     <footer className="flex flex-col text-black-100 mt-5 border-t border-gray-100">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-10 sm:px-16 px-6 py-10">
         <div className="flex flex-col justify-start items-start gap-6">
-          <h3>CATALOGUE</h3>
+          <Link href="/" className={`flex justify-center items-center text-2xl ${title_font.className}`}>Catalogue</Link>
           <p className="text-base text-gray-700">
             Catalogue 2025 <br />
             All Rights Reserved &copy;

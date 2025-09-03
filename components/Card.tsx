@@ -3,9 +3,6 @@
 import { Heart } from "lucide-react";
 import { CardProps } from "../types";
 
-// add some animation on card hover
-// resize images to all have same wxh
-
 export default function Card({
     title = "Placeholder",
     price = 18,
@@ -18,18 +15,18 @@ export default function Card({
 }: CardProps) {
   
     return (
-        <div className="bg-white">
+        <div className="group bg-white transition-transform duration-300 ease-out hover:-translate-y-0.5 cursor-pointer">
             {/* Image */}
-            <div className="relative aspect-[4/3] w-full overflow-hidden">
+            <div className="relative aspect-[4/3] w-full overflow-hidden bg-white">
                 <img
                     src={imageUrl}
                     alt={title}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="h-full w-full object-contain p-2 transition-transform duration-500 ease-out group-hover:scale-105"
                 />
 
                 {/* Wishlist button */}
                 <button
-                    className="absolute right-2 top-2 rounded-full bg-popover p-1.5 text-popover-foreground shadow transition hover:bg-accent hover:text-accent-foreground"
+                    className="absolute right-2 top-2 rounded-full bg-popover p-1.5 text-popover-foreground shadow transition-colors hover:bg-accent hover:text-accent-foreground"
                 >
                     <Heart className="h-4 w-4" aria-hidden />
                 </button>
