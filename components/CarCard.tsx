@@ -16,7 +16,7 @@ export default function CarCard({ car }: CarCardProps) {
     const carRent = useMemo(() => calculateCarRent(car.year), [car.year]);
 
     return (
-        <div className="flex flex-col p-6 justify-center items-start text-black-100 bg-(--card) hover:bg-white hover:shadow-md rounded-3xl group">
+        <div className="flex flex-col p-6 justify-center items-start text-black-100 bg-(--card) hover:bg-white hover:shadow-md rounded-3xl group shadow-sm">
             <div className="w-full flex justify-between items-start gap-2">
                 <h2 className="text-[22px] leading-[26px] font-bold capitalize">
                     {title}
