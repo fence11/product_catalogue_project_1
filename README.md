@@ -1,12 +1,3 @@
-## To-do
-
-- remove temp const products and replace with RapidAPI cars
-- complete filter panel
-- have details popup for every product
-- ? add pagination or some kind of scroll based item generation
-- ? deployment (don't know if needed)
-
-
 <<<<<<< HEAD
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
