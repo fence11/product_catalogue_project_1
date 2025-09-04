@@ -53,7 +53,7 @@ export default function CarCard({ car }: CarCardProps) {
                 <div className="hidden group-hover:flex absolute bottom-0 w-full z-10">
                     <CustomButton
                         title='View More'
-                        containerStyles='w-full py-[16px] rounded-full bg-(--primary)'
+                        containerStyles='w-full py-[16px] rounded-full bg-(--primary) cursor-pointer'
                         textStyles='text-white text-[14px] leading-[17px] font-bold'
                         rightIcon='/right-arrow.svg'
                         handleClick={() => setIsOpen(true)}
