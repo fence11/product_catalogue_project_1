@@ -14,7 +14,6 @@ export default function Home() {
 
   useEffect(() => {
     const load = async () => {
-      try {
         setLoading(true);
         const data: unknown = await fetchCars({ manufacturer: "Jaguar", year: 2020, model: "", fuel: "" });
         // console.log("fetchCars response:", data);
@@ -26,18 +25,13 @@ export default function Home() {
           : [];
         //
         setCars(list);
-      } catch (e) {
-        setError("Failed to load cars");
-        console.error("fetchCars error:", e);
-      } finally {
         setLoading(false);
-      }
     };
     load();
   }, []);
 
   const items: SearchProductProps[] = useMemo(
-    () => cars.map((c, idx) => ({ id: idx, title: `${c.make} ${c.model}` })),
+    () => cars.map((c, id) => ({ id: id, title: `${c.make} ${c.model}` })),
     [cars]
   );
 
