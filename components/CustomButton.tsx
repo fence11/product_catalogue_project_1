@@ -8,7 +8,7 @@ const Button = ({ isDisabled, btnType, containerStyles, textStyles, title, right
   <button
     disabled={isDisabled}
     type={btnType || "button"}
-    className={`custom-btn inline-flex items-center w-full ${containerStyles}`}
+    className={`custom-btn inline-flex items-center ${containerStyles}`}
     onClick={handleClick}
   >
     {rightIcon && <div className="w-6 h-6 mr-4 invisible" />}

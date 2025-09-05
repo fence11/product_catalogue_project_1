@@ -16,7 +16,7 @@ export default function CarCard({ car }: CarCardProps) {
     const carRent = useMemo(() => calculateCarRent(car.year), [car.year]);
 
     return (
-        <div className="flex flex-col p-6 justify-center items-start text-black-100 bg-(--card) hover:bg-white hover:shadow-md rounded-3xl group shadow-sm">
+        <div className="flex flex-col p-6 justify-center items-start text-black-100 bg-[var(--card)] hover:bg-white hover:shadow-md rounded-3xl group shadow-sm">
             <div className="w-full flex justify-between items-start gap-2">
                 <h2 className="text-[22px] leading-[26px] font-bold capitalize">
                     {title}
@@ -53,7 +53,7 @@ export default function CarCard({ car }: CarCardProps) {
                 <div className="hidden group-hover:flex absolute bottom-0 w-full z-10">
                     <CustomButton
                         title='View More'
-                        containerStyles='w-full py-[16px] rounded-full bg-(--primary) cursor-pointer'
+                        containerStyles='w-full py-[16px] rounded-full bg-[var(--primary)] cursor-pointer'
                         textStyles='text-white text-[14px] leading-[17px] font-bold'
                         rightIcon='/right-arrow.svg'
                         handleClick={() => setIsOpen(true)}
